@@ -8,7 +8,9 @@ module CsvSeeder
   def exec(folder_path: 'db/seeds', orders: [])
     ins = CSVSeeder.new(folder_path, orders)
     ins.dirs_loop!
-  end  
+  end
+
+  module_function :exec
 
   class CSVSeeder
 
